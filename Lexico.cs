@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Sintaxis_1
+namespace Semantica
 {
     public class Lexico : Token, IDisposable
     {
@@ -14,6 +14,7 @@ namespace Sintaxis_1
         protected int linea;
         const int F = -1;
         const int E = -2;
+        
         int[,] TRAND =
         {
             {0, 1, 2,26 ,1, 9,10, 8,18,12,27,12,14,15,19,17,17,21,22,24,25,26,26, 0,31},
@@ -53,12 +54,13 @@ namespace Sintaxis_1
         };
         public Lexico() // Constructor
         {
+            linea = 0;
             log = new StreamWriter("prueba.log");
             log.AutoFlush = true;
             asm = new StreamWriter("prueba.asm");
             asm.AutoFlush = true;
             log.WriteLine("Analizador Lexico");
-            log.WriteLine("Autor: Rafael Mejía");
+            log.WriteLine("Autor: Angel Josué Martínez Prieto");
             asm.WriteLine("; Autor: Rafael Mejía");
 
             if (!File.Exists("prueba.cpp"))
@@ -74,8 +76,8 @@ namespace Sintaxis_1
             asm = new StreamWriter(Path.GetFileNameWithoutExtension(nombre) + ".asm");
             asm.AutoFlush = true;
             log.WriteLine("Analizador Lexico");
-            log.WriteLine("Autor: Rafael Mejía");
-            asm.WriteLine("; Autor: Rafael Mejía");
+            log.WriteLine("Autor: Ángel Josué Martínez Prieto");
+            asm.WriteLine("; Autor: Ángel Josué Martínez Prieto");
 
             if (Path.GetExtension(nombre) != ".cpp")
             {
@@ -222,7 +224,7 @@ namespace Sintaxis_1
                 case 24: setClasificacion(Tipos.Inicio); break;
                 case 25: setClasificacion(Tipos.Fin); break;
                 case 26: setClasificacion(Tipos.Caracter); break;
-                case 31: setClasificacion(Tipos.Moneda); break;
+               
 
             }
         }
@@ -265,10 +267,7 @@ namespace Sintaxis_1
                 {
                     throw new Error(" Se espera un cierre de comentario\n " + buffer, log);
                 }
-                else if (getClasificacion() == Tipos.Moneda)
-                {
-                    throw new Error(" Se espera un digito\n " + buffer, log);
-                }
+            
             }
             setContenido(buffer);
             if (getClasificacion() == Tipos.Identificador)
@@ -277,8 +276,7 @@ namespace Sintaxis_1
                 {
                     case "char":
                     case "int":
-                    case "float":
-                    case "double": setClasificacion(Tipos.TipoDato); break;
+                    case "float": setClasificacion(Tipos.TipoDato); break;
                     case "if":
                     case "else":
                     case "switch": setClasificacion(Tipos.Condicion); break;

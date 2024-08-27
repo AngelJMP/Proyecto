@@ -12,3 +12,4 @@ C:\Users\marti\OneDrive\Documentos\Angel\5to semestre\LyA 2\Semantica\obj\Debug\
 C:\Users\marti\OneDrive\Documentos\Angel\5to semestre\LyA 2\Semantica\obj\Debug\net8.0\Semantica.pdb
 C:\Users\marti\OneDrive\Documentos\Angel\5to semestre\LyA 2\Semantica\obj\Debug\net8.0\Semantica.genruntimeconfig.cache
 C:\Users\marti\OneDrive\Documentos\Angel\5to semestre\LyA 2\Semantica\obj\Debug\net8.0\ref\Semantica.dll
+C:\Users\marti\OneDrive\Documentos\Angel\5to semestre\LyA 2\Semantica\obj\Debug\net8.0\Semantica.sourcelink.json

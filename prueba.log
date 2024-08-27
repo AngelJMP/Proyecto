@@ -1,0 +1,7 @@
+Analizador Lexico
+Autor: Ángel Josué Martínez Prieto
+123 = Numero
++ = OpTermino
+radio = Identificador
+; = FinSentencia
+using = Identificador
