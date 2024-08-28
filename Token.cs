@@ -14,8 +14,8 @@ namespace Semantica
             IncFactor, Cadena, Inicio, Fin, Caracter, TipoDato, Ciclo, 
             Condicion
         };
-        private string contenido;
-        private Tipos clasificacion;
+        public string contenido;
+        public Tipos clasificacion;
         public Token()
         {
             contenido = "";

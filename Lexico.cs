@@ -61,7 +61,7 @@ namespace Semantica
             asm.AutoFlush = true;
             log.WriteLine("Analizador Lexico");
             log.WriteLine("Autor: Angel Josué Martínez Prieto");
-            asm.WriteLine("; Autor: Rafael Mejía");
+            asm.WriteLine("; Autor: Ángel Josué Martínez Prieto");
 
             if (!File.Exists("prueba.cpp"))
             {

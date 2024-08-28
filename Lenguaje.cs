@@ -53,6 +53,22 @@ namespace Semantica
                 listalibrerias();
             }
         }
+
+        private void Variables()
+        {
+            match(Tipos.TipoDato);
+            if(getContenido() == "char" || getContenido() == "int" || getContenido() == "float");
+            {
+                ListaVariables();
+            }    
+        }
+
+        private void ListaVariables()
+        {
+            
+        }
+
+      
 /*Programa  -> Librerias? Variables? Main
 Librerias -> using ListaLibrerias; Librerias?
 Variables -> tipo_dato Lista_identificadores; Variables?

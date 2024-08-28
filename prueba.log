@@ -3,5 +3,5 @@ Autor: Ángel Josué Martínez Prieto
 123 = Numero
 + = OpTermino
 radio = Identificador
-; = FinSentencia
 using = Identificador
+Error: Sintaxis: se espera un ;
